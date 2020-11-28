@@ -1,9 +1,5 @@
 $(function () {
-    var socket = io("ws://localhost", {
-        query: {
-            auth: "123"
-        }
-    });
+    var socket = io();
     $('#messageForm').submit(function (e) {
         e.preventDefault(); // prevents page reloading
         socket.emit('message', $('#message').val());
